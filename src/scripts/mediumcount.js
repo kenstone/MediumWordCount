@@ -1,32 +1,36 @@
 var countWords = function(displayElement) {
-    var paragraphs = $(".body:not('.default-value') p");
+
+    var paragraphs = $(".surface:visible .body:not('.default-value') p");
+
     var wordCount = 0;
     for (var i = 0; i < paragraphs.length; i++) {
         var textToCount = paragraphs[i].innerText;
         var words = textToCount.split(' ');
         wordCount += words.length;
     }
-    displayElement.text(wordCount + " words");
-}
+    displayElement.text(addCommas(wordCount) + " words");
+};
 
 var addWordCounter = function() {
-    var display = $("#mediumWordCounter");
+    var display = $(".surface:visible .mediumWordCounter");
     if (!display.length) {
-        display = $("<div id='mediumWordCounter'/>");
+        display = $("<div class='mediumWordCounter'/>");
         $(".metabar").append(display);
     }
 
     countWords(display);
 
-    var keydown = function() {
+    window.onkeydown = function() {
         countWords(display);
-    }
+    };
 
-    window.onkeydown = keydown;
+};
 
+function addCommas(intNum) {
+    return (intNum + '').replace(/(\d)(?=(\d{3})+$)/g, '$1,');
 }
 
-chrome.runtime.onMessage.addListener(function(request, sender) {
+chrome.runtime.onMessage.addListener(function() {
     addWordCounter();
-})
+});
 

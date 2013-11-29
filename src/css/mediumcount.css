@@ -1,5 +1,28 @@
-#mediumWordCounter {
-    left:.8rem;
-    top:3.5rem;
-    position:absolute;
+.mediumWordCounter {
+    background-color: rgba(255,255,255,0.97);
+    left: 7.6rem;
+    top: 0.6rem;
+    line-height: 44px;
+
+    padding: 0 9px;
+    position:fixed;
+
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition:all .3s;
+
+}
+.metabar-mode-null + .mediumWordCounter {
+    left: 3.4rem;
+}
+
+.distraction-free .mediumWordCounter {
+    left:4.6rem;
+    -webkit-transition: all .5s .3s;
+    -moz-transition: all .5s .3s;
+    -ms-transition: all .5s 3s;
+    -o-transition: all .5s .3s;
+    transition:all .5s .3s;
 }
