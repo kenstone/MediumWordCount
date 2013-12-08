@@ -5,7 +5,7 @@
     line-height: 44px;
 
     padding: 0 9px;
-    position:fixed;
+    position:absolute;
 
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
@@ -20,6 +20,7 @@
 
 .metabar-block.align-left ~ .mediumWordCounter {
     left:7.6rem;
+    position: fixed;
 }
 
 .metabar-light .mediumWordCounter {
