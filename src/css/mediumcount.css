@@ -1,6 +1,6 @@
 .mediumWordCounter {
     background-color: rgba(255,255,255,0.97);
-    left: 7.6rem;
+    left: 3.4rem;
     top: 0.6rem;
     line-height: 44px;
 
@@ -12,14 +12,24 @@
     -ms-transition: all .3s;
     -o-transition: all .3s;
     transition:all .3s;
-
 }
-.metabar-mode-null + .mediumWordCounter {
-    left: 3.4rem;
+
+.mediumWordCounter.hidden {
+    display:none;
+}
+
+.metabar-block.align-left ~ .mediumWordCounter {
+    left:7.6rem;
+}
+
+.metabar-light .mediumWordCounter {
+    position:absolute;
+    color:white;
+    background-color: transparent;
 }
 
 .distraction-free .mediumWordCounter {
-    left:4.6rem;
+    left:5rem !important;
     -webkit-transition: all .5s .3s;
     -moz-transition: all .5s .3s;
     -ms-transition: all .5s 3s;

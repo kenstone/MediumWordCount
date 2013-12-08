@@ -2,6 +2,8 @@ var countWords = function(displayElement) {
 
     var paragraphs = $(".surface:visible .body:not('.default-value') p");
 
+    paragraphs.length ? displayElement.removeClass("hidden") : displayElement.addClass("hidden");
+
     var wordCount = 0;
     for (var i = 0; i < paragraphs.length; i++) {
         var textToCount = paragraphs[i].innerText;

@@ -12,6 +12,9 @@ chrome extension displays the current count of words in the upper left hand corn
 Medium does display word count when text is selected. This extension shows the entire post count at all times.
 
 ##Release Notes
+###0.1.2
+Updating the display for the Medium 1.0 release.
+
 ###0.1.1
 Changed the way the counter is displayed. Fixed bugs with counting words on hidden surfaces.
 
