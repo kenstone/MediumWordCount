@@ -16,8 +16,8 @@ var countWords = function(displayElement) {
 var addWordCounter = function() {
     var display = $(".surface:visible .mediumWordCounter");
     if (!display.length) {
-        display = $("<div class='mediumWordCounter'/>");
-        $(".metabar").append(display);
+        display = $("<span class='mediumWordCounter'/>");
+        $(".postMetaInline").append(display);
     }
 
     countWords(display);
