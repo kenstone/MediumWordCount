@@ -1,6 +1,6 @@
 var countWords = function(displayElement) {
 
-    var paragraphs = $(".surface:visible .body:not('.default-value') p");
+    var paragraphs = $(".surface:visible .postField--body:not('.default-value') p");
 
     paragraphs.length ? displayElement.removeClass("hidden") : displayElement.addClass("hidden");
 
