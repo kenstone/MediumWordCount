@@ -17,7 +17,7 @@ var addWordCounter = function() {
     var display = $(".surface:visible .mediumWordCounter");
     if (!display.length) {
         display = $("<span class='mediumWordCounter'/>");
-        $(".postMetaInline").append(display);
+        $(".postMetaInline--authorDateline").append(display);
     }
 
     countWords(display);
